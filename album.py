@@ -10,14 +10,6 @@ from flask import abort, Flask, jsonify, request
 
 app = Flask(__name__)
 
-# def is_request_valid(request):
-#     is_token_valid = request.form['token'] == os.environ[token']
-#     is_team_id_valid = request.form['team_id'] == os.environ['team_id']
-#     print("not valid")
-#     return is_token_valid and is_team_id_valid
-
-# @app.route('/hello-there', methods=['POST'])
-# def hello_there():
 @app.route("/album", methods=['POST'])
 def album():
     url = "https://1001albumsgenerator.com/api/v1/groups/companyx"
@@ -35,11 +27,3 @@ def album():
             response_type='in_channel',
             text="error",
         )
-
-    # return jsonify(
-    #     response_type='in_channel',
-    #     text='<https://youtu.be/frszEJb0aOo|General Kenobi!>',
-    # )
-    # print("yo")
-    # if not is_request_valid(request):
-    #     abort(400)
