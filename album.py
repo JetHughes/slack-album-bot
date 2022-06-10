@@ -1,12 +1,6 @@
-import os
 import requests
 import json
-from flask import abort, Flask, jsonify, request
-
-
-# client = slack.WebClient(token=os.environ['SLACK_TOKEN'])
-# user_id = "U01JKKZFVJS"
-
+from flask import Flask, jsonify
 
 app = Flask(__name__)
 
